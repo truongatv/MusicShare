@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Songs from '@/components/Songs/Index'
@@ -13,11 +12,6 @@ Vue.use(Router)
 export default new Router({
 	mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HelloWorld
-    },
     {
       path: '/register',
       name: 'register',
@@ -47,6 +41,11 @@ export default new Router({
       path: '/songs/:songId/edit',
       name: 'song-edit',
       component: EditSong
+    },
+    {
+      // will match everything
+      path: '/*',
+      redirect: 'songs'
     }
   ]
 })
