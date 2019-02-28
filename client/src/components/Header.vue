@@ -2,11 +2,14 @@
   <v-toolbar fixed class="cyan" dark>
     <v-toolbar-title class="mr-4">
       <span class="home" @click="navigateTo({name: 'songs'})">
-        Tabtracker
+        TruongAtv
       </span>
     </v-toolbar-title>
     <v-toolbar-items>
-      <v-btn flat dark @click="navigateTo({name: 'songs'})">Browse</v-btn>
+      <v-btn flat dark @click="navigateTo({name: 'songs'})">Browse Songs</v-btn>
+    </v-toolbar-items>
+    <v-toolbar-items>
+      <v-btn flat dark :to="{name: 'notes'}">Notes</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <input id="search-song" type="text" v-if="showSearch" name="" placeholder="search..." v-model="dataSearch">

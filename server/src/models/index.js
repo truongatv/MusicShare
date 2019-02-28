@@ -5,7 +5,7 @@ const config = require('../config/config')
 const db = {}
 
 const sequelize = new Sequelize(
-	"music",
+	"truongatv",
 	config.db.user,
 	config.db.password,
 	config.db.options

@@ -12,6 +12,7 @@ import 'es6-promise/auto'
 import store from './store/store'
 import Panel from '@/components/globals/Panel'
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
 
 Vue.use(VueYouTubeEmbed)
 
@@ -21,6 +22,8 @@ Vue.config.productionTip = false
 Vue.use(Vuetify)
 
 Vue.component('Panel', Panel)
+Vue.component('EditorContent', EditorContent)
+Vue.component('EditorMenuBar', EditorMenuBar)
 
 sync(store, router)
 

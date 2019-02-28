@@ -6,6 +6,8 @@ import Songs from '@/components/Songs/Index'
 import CreateSong from '@/components/CreateSong'
 import EditSong from '@/components/EditSong'
 import ViewSong from '@/components/ViewSong/Index'
+import ViewNote from '@/components/Notes/Index'
+import CreateNote from '@/components/Notes/Create'
 
 Vue.use(Router)
 
@@ -42,10 +44,25 @@ export default new Router({
       name: 'song-edit',
       component: EditSong
     },
+    /*
+    router for notes
+     */
     {
-      // will match everything
+      path: '/notes',
+      name: 'notes',
+      component: ViewNote
+    },
+    {
+      path: '/create-note',
+      name: 'create-note',
+      component: CreateNote
+    },
+    /*
+    // will match everything
+     */
+    {
       path: '/*',
       redirect: 'songs'
-    }
+    },
   ]
 })

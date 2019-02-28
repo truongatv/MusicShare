@@ -2,6 +2,7 @@ const AuthenticationController = require('./controllers/AuthenticationController
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 const SongsController = require('./controllers/SongsController')
 const BookmarksController = require('./controllers/BookmarksController')
+const NotesController = require('./controllers/NotesController')
 
 module.exports = (app) => {
 	app.post('/register',
@@ -32,5 +33,14 @@ module.exports = (app) => {
     ),
     app.delete('/bookmarks/:userId/:bookmarkId',
     	BookmarksController.delete
+    ),
+    /*
+    router for notes
+     */
+    app.get('/notes',
+    	NotesController.index
+    ),
+    app.post('/create-note',
+    	NotesController.create
     )
 }
